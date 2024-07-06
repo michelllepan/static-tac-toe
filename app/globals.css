@@ -6,6 +6,8 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --grid-color: black;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -30,4 +32,32 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.grid-cell {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .grid-cell:hover {
+  cursor: pointer;
+} */
+
+#id1,
+#id7 {
+  border-left: 2px solid var(--grid-color);
+  border-right: 2px solid var(--grid-color);
+}
+
+#id3,
+#id5 {
+  border-top: 2px solid var(--grid-color);
+  border-bottom: 2px solid var(--grid-color);
+}
+
+#id4 {
+  border: 2px solid var(--grid-color);
 }
